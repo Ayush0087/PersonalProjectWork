@@ -1,0 +1,7 @@
+C:\Users\acer\Documents\GitHub\PersonalProjectWork\till monday\GreatOutdoor ReturnOnlineOrder\GreatOutdoor ReturnOnlineOrder\bin\Debug\GreatOutdoor ReturnOnlineOrder.exe.config
+C:\Users\acer\Documents\GitHub\PersonalProjectWork\till monday\GreatOutdoor ReturnOnlineOrder\GreatOutdoor ReturnOnlineOrder\bin\Debug\GreatOutdoor ReturnOnlineOrder.exe
+C:\Users\acer\Documents\GitHub\PersonalProjectWork\till monday\GreatOutdoor ReturnOnlineOrder\GreatOutdoor ReturnOnlineOrder\bin\Debug\GreatOutdoor ReturnOnlineOrder.pdb
+C:\Users\acer\Documents\GitHub\PersonalProjectWork\till monday\GreatOutdoor ReturnOnlineOrder\GreatOutdoor ReturnOnlineOrder\obj\Debug\GreatOutdoor.PresentationLayer.csprojAssemblyReference.cache
+C:\Users\acer\Documents\GitHub\PersonalProjectWork\till monday\GreatOutdoor ReturnOnlineOrder\GreatOutdoor ReturnOnlineOrder\obj\Debug\GreatOutdoor.PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\acer\Documents\GitHub\PersonalProjectWork\till monday\GreatOutdoor ReturnOnlineOrder\GreatOutdoor ReturnOnlineOrder\obj\Debug\GreatOutdoor ReturnOnlineOrder.exe
+C:\Users\acer\Documents\GitHub\PersonalProjectWork\till monday\GreatOutdoor ReturnOnlineOrder\GreatOutdoor ReturnOnlineOrder\obj\Debug\GreatOutdoor ReturnOnlineOrder.pdb
