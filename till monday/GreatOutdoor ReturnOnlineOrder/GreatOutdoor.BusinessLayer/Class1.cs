@@ -15,7 +15,7 @@ namespace GreatOutdoor.BusinessLayer
         {
             StringBuilder sb = new StringBuilder();
             bool validOnlineReturnBL = true;
-            if (OnlineReturn.ReturnID <= 0)
+            if (onlineReturn.ReturnID <= 0)
             {
                 validOnlineReturnBL = false;
                 sb.Append(Environment.NewLine + "Invalid Online Return ID");
@@ -79,7 +79,7 @@ namespace GreatOutdoor.BusinessLayer
             return onlineReturnList;
         }
 
-        public static OnlineReturnBL SearchOnlineReturnBL(int searchReturnID)
+        public static OnlineReturnBL SearchOnlineReturn(int searchReturnID)
         {
             OnlineReturnBL searchOnlineReturn = null;
             try

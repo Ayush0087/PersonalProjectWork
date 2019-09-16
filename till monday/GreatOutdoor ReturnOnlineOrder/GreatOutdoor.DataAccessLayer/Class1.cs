@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GreatOutdoor.BusinessLayer;
 using GreatOutdoor.Entity;
 using GreatOutdoor.Exception;
 
@@ -43,7 +42,7 @@ namespace GreatOutdoor.DataAccessLayer
             {
                 foreach (OnlineReturn item in onlineReturnList)
                 {
-                    if (item.ReturnID == searchReturnID)
+                    if (OnlineReturn.ReturnID == searchReturnID)
                     {
                         searchOnlineReturnDAL = item;
                     }
@@ -51,7 +50,7 @@ namespace GreatOutdoor.DataAccessLayer
             }
             catch (SystemException ex)
             {
-                throw new Exception(ex.Message);
+                throw new GreatOutdoorException(ex.Message);
             }
             return searchOnlineReturnDAL;
         }
@@ -76,21 +75,25 @@ namespace GreatOutdoor.DataAccessLayer
             return searchOnlineReturnDAL;
         }
 
-        public bool UpdateReturnOnlineOrderDAL(OnlineReturn updateonlineReturn)
+        public bool UpdateOnlineReturnDAL(OnlineReturn updateonlineReturn, int retId)
         {
             bool onlineReturnUpdated = false;
             try
             {
-                for (int i = 0; i < onlineReturnList.Count; i++)
+                foreach(OnlineReturn item in onlineReturnList)
                 {
-                    if (onlineReturnList[i].ReturnID == updateonlineReturn.ReturnID)
-                    {
-                        updateonlineReturn.PurposeofReturn = onlineReturnList[i].PurposeofReturn;
-                        updateonlineReturn.NoOfReturn =onlineReturnList[i].NoOfReturn;
-                        updateonlineReturn.DateOfReturn = onlineReturnList[i].DateOfReturn;
-                        onlineReturnUpdated = true;
-                    }
+                    item.ReturnID==retId
                 }
+               // for (int i = 0; i < onlineReturnList.Count; i++)
+               // {
+               //     if (OnlineReturnDAL.onlineReturnList.Contains(updateonlineReturn))
+               //     {
+               //         updateonlineReturn.PurposeofReturn = onlineReturnList[i].PurposeofReturn;
+               //         updateonlineReturn.NoOfReturn =onlineReturnList[i].NoOfReturn;
+               //         updateonlineReturn.DateOfReturn = onlineReturnList[i].DateOfReturn;
+               //         onlineReturnUpdated = true;
+               //     }
+               // }
             }
             catch (SystemException ex)
             {

@@ -10,7 +10,7 @@ namespace GreatOutdoor.Entity
     public class OnlineReturn
     {
         //fields
-        private static int _returnID;
+        private  int _returnID;
         private string _PurposeofReturn;
         private string _noOfReturn;
         private DateTime _dateOfReturn;
@@ -19,7 +19,7 @@ namespace GreatOutdoor.Entity
        
 
         public DateTime DateOfReturn { get => DateOfReturn; set => DateOfReturn = value; }
-        public static int ReturnID { get => _returnID; set => _returnID = value; }
+        public  int ReturnID { get => _returnID; set => _returnID = value; }
         public string PurposeofReturn { get => _PurposeofReturn; set => _PurposeofReturn = value; }
         public string NoOfReturn { get => _noOfReturn; set => _noOfReturn = value; }
         
