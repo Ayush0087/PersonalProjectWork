@@ -29,12 +29,36 @@ namespace GreatOutdoor.BusinessLayer
 
             }
 
-            Regex regex1 = new Regex("^[A-Fa-f. ]*$");
+            Regex regex1 = new Regex("^[A-zZ-a ]*$");
             bool b = regex1.IsMatch(onlineReturn.PurposeOfReturn);
-            if (onlineReturn.PurposeOfReturn == string.Empty)
+            //if (b == true)
+            //{
+            //    int a = int.Parse(onlineReturn.PurposeOfReturn);
+            //    if (a == 1)
+            //    {
+            //        onlineReturn.PurposeOfReturn = "Unsatisfactory Product";
+            //    }
+            //    else if (a == 2)
+            //    {
+            //        onlineReturn.PurposeOfReturn = "Defective product";
+            //    }
+            //    else if (a == 3)
+            //    {
+            //        onlineReturn.PurposeOfReturn = "Incomplete Product";
+            //    }
+            //    else if (a == 4)
+            //    {
+            //        onlineReturn.PurposeOfReturn = "Wrong Product Ordered";
+            //    }
+            //    else if (a == 5)
+            //    {
+            //       onlineReturn.PurposeOfReturn = "wrong Product shipped";
+            //    }
+
+            //    if (onlineReturn.PurposeOfReturn == string.Empty)
             {
-                validOnlineReturnBL = false;
-                sb.Append(Environment.NewLine + "Invalid Purpose of Return");
+                  validOnlineReturnBL = false;
+                  sb.Append(Environment.NewLine + "Invalid Purpose of Return");
 
             }
             if (onlineReturn.DateOfReturn.AddDays(10) < DateTime.Now)
@@ -87,45 +111,28 @@ namespace GreatOutdoor.BusinessLayer
         }
 
 
-        //public static List<OnlineReturnBL> GetAllOnlineReturnBL(int ReturnID)
-        //{
-        //    List<OnlineReturnBL> onlineReturnList = null;
-        //    try
-        //    {
-        //        OnlineReturnDAL onlineReturn = new OnlineReturnDAL();
-        //        onlineReturnList = OnlineReturnDAL.GetAllReturnOnlineOrderDAL(ReturnID);
-        //    }
-        //    catch (GreatOutdoorException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    return onlineReturnList;
-        //}
+        
 
-        //public List<OnlineReturn> GetOnlineReturnByRPurposeOfReturnBL(string searchPurposeOfReturn)
-        //{
-        //    OnlineReturnBL GetPurposeOfReturn = null;
-        //    try
-        //    {
-        //        OnlineReturnDAL onlineReturnDAL = new OnlineReturnDAL();
-        //        GetPurposeOfReturn = onlineReturnDAL.GetOnlineReturnByRPurposeOfReturnDAL(searchPurposeOfReturn);
-        //    }
-           
-        //    catch (System.Exception ex)
-        //    {
-        //        throw new OnlineReturnException (ex.Message);
-        //    }
-        //    return GetPurposeOfReturn;
+         public List<OnlineReturn> GetOnlineReturnByRPurposeOfReturnBL(string searchPurposeOfReturn)
+         {
+              List<OnlineReturn> GetPurposeOfReturn = new List<OnlineReturn>();
+              try
+              {
+              OnlineReturnDAL onlineReturnDAL = new OnlineReturnDAL();
+              GetPurposeOfReturn = onlineReturnDAL.GetOnlineReturnByRPurposeOfReturnDAL(searchPurposeOfReturn);
+              }
 
-        //}
+              catch (System.Exception ex)
+              {
+               throw new OnlineReturnException(ex.Message);
+              }
+              return GetPurposeOfReturn;
+
+         }
 
         public bool UpdateOnlineReturnBL(OnlineReturn updateonlineReturn)
         {
-            bool onlineReturnUpdated = false;
+             bool onlineReturnUpdated = false;
             try
             {
                 if (ValidateOnlineReturnBL(updateonlineReturn))

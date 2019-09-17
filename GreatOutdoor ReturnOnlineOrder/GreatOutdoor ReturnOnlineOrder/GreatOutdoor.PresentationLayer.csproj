@@ -49,5 +49,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GreatOutdoor.BusinessLayer\GreatOutdoor.BusinessLayer.csproj">
+      <Project>{07b724b4-c10a-4493-b8c3-479b8faeda36}</Project>
+      <Name>GreatOutdoor.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreatOutdoor.DataAccessLayer\GreatOutdoor.DataAccessLayer.csproj">
+      <Project>{6b865f09-5a89-4049-b60f-5f17064dcc38}</Project>
+      <Name>GreatOutdoor.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreatOutdoor.Entity\GreatOutdoor.Entity.csproj">
+      <Project>{6f0a66f3-b56d-48fc-9837-89395de2f355}</Project>
+      <Name>GreatOutdoor.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreatOutdoor.Exception\GreatOutdoor.Exception.csproj">
+      <Project>{58acc988-83ae-4954-862d-93769e6b8447}</Project>
+      <Name>GreatOutdoor.Exception</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
